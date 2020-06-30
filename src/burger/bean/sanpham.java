@@ -54,15 +54,22 @@ public class sanpham {
 	public String getTen_sp() {
 		return ten_sp;
 	}
+	public String getImages() {
+		return images;
+	}
+	public void setImages(String images) {
+		this.images = images;
+	}
+	public Double getGia_goc() {
+		return gia_goc;
+	}
+	public void setGia_goc(Double gia_goc) {
+		this.gia_goc = gia_goc;
+	}
 	public void setTen_sp(String ten_sp) {
 		this.ten_sp = ten_sp;
 	}
-	public Double getGia_ban() {
-		return gia_goc;
-	}
-	public void setGia_ban(Double gia_goc) {
-		this.gia_goc = gia_goc;
-	}
+
 	public Integer getPhan_tram() {
 		return phan_tram;
 	}

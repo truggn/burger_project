@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import burger.bean.loaisanpham;
 import burger.bean.sanpham;
 
 
@@ -32,18 +33,28 @@ public class user_burger_controller {
 	
 	@Transactional
 	@RequestMapping("trang-chu")
-	public String home(ModelMap model) {
+	public String home(ModelMap model,@ModelAttribute("idlsp") String idlsp) {
 		Session session = factory.getCurrentSession();
-		try {
-			
-			String hql = "FROM sanpham";
-			Query query = session.createQuery(hql);
-			List<sanpham> list = query.list();
-			model.addAttribute("Sanpham", list);
+		String hql = "From loaisanpham";
+		Query query = session.createQuery(hql);
+		List<loaisanpham> loaisanpham = query.list();
+		model.addAttribute("LoaiSP", loaisanpham);
 		
-		} catch (Exception e) {
-			System.out.println("Lỗi truy vấn dữ liệu");
+		if (idlsp.isEmpty()) {
+			String hql1 = "From sanpham where id_loai = " + loaisanpham.get(0).getId_loai()+"";
+			Query query1 = session.createQuery(hql1);
+			List<sanpham> dsshop = query1.list();
+			model.addAttribute("dsshop", dsshop);
+			model.addAttribute("idlsp", loaisanpham.get(0).getId_loai());
+		} else {
+			String hql1 = "From sanpham where id_loai = " + idlsp +"";
+			Query query1 = session.createQuery(hql1);
+			List<sanpham> dsshop = query1.list();
+			model.addAttribute("dsshop", dsshop);
+			model.addAttribute("idlsp", idlsp);
 		}
+		
 		return("user/home");
 	}
+
 }

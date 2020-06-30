@@ -1,0 +1,11 @@
+.top{
+	padding-top:100px;
+
+}
+.menu-bar{
+	position: fixed;
+	z-index:9;
+	width:100%;
+	
+
+}

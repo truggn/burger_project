@@ -35,6 +35,7 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/slicknav.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/top.css">
 	<link rel="stylesheet" href="css/home.css">
 	
 	<!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -43,7 +44,7 @@
 <body>
         <!-- header-start -->
         <header>
-        	<div class="header-area ">
+        	<div class="header-area">
         		<div id="sticky-header" class="main-header-area">
         			<div class="container-fluid p-0">
         				<div class="row align-items-center no-gutters">
