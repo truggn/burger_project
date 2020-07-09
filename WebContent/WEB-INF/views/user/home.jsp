@@ -2,67 +2,67 @@
  <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<div class="top">
-	<div class="best_burgers_area">
-			<div class="menu-bar">
-				<div class="container" id="pd-bt">
-		      					<ul class="nav justify-content-center">
-									<c:forEach var="lsp" items="${LoaiSP}">
-			        					<li class="item" style="margin-right: 40px">      					
-			        						<a href="trang-chu.html?idlsp=${lsp.id_loai }" items="${Burger}">
-			        							<img class="rounded-circle" src="https://burgerking.vn/media/wysiwyg/navigation/P-BURGER.jpg">
-			        							</br>&emsp;<strong>${lsp.ten_loai }</strong>
-			        						</a>      					      							
-			        					</li>
-			        				</c:forEach>	     					
-		        				</ul> 		
-		        	</div>
-			</div>
-        	<div class="container">
-        		<div class="row">
-  
-        			<div class="col-lg-12">
-        				<div class="section_title text-center mb-80">
-        					<span>Burger Menu</span>
-        					<h3>Best Ever Burgers</h3>
-        				</div>
-        			</div>
-        		</div>
-        		<div class="row">
-        		
-        		<!-- //////////////////Load data san pham/////////////////////// -->
-        		
-        		<c:forEach var="sp" items="${dsshop}">
-        					<div class="col-xl-6 col-md-6 col-lg-6">
-        				<div class="single_delicious d-flex align-items-center">
-        					<div class="thumb">
-        						<img src="img/burger/${sp.images}" alt="${sp.ten_sp}">
-        					</div>
-        					<div class="info">
-        						<h3>${sp.ten_sp}</h3>
-        						<p>${sp.mo_ta}</p>
-        						<div class="row">
-        						<span>${sp.gia_goc}&ensp;VND</span>
-        						<button type="button" class=" ml-3 btn btn-outline-primary">Add To Cart</button> 
-        						</div>
-        						
-        					</div>
-        				</div>
-        			</div>      				
-        		</c:forEach>
-        		
-		<!-- //////////////////Load data san pham/////////////////////// -->
+<div>
 	
+	<!--Start Slide  -->
 	
-        		</div>
-        		<div class="row">
-        			<div class="col-lg-12">
-        				<div class="iteam_links">
-        					<a class="boxed-btn5" href="Menu.html">More Items</a>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </div>
+	            
+                <div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/slide/bannerweb-min_1.jpg" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="img/slide/banner_web_10.jpg" alt="Chicago">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
 </div>
+	
+</div>
+    <div class="about_area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="about_thumb2">
+                            <div class="img_1">
+                                <img src="img/about/1.png" alt="">
+                            </div>
+                            <div class="img_2">
+                                <img src="img/about/2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-5 offset-lg-1 col-md-6">
+                        <div class="about_info">
+                            <div class="section_title mb-20px">
+                                <span>About Us</span>
+                                <h3>Best Burger <br>
+                                        in your City</h3>
+                            </div>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate</p>
+                            <div class="img_thumb">
+                                <img src="img/jessica-signature.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
  

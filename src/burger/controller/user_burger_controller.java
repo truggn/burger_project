@@ -14,6 +14,7 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,8 +33,11 @@ public class user_burger_controller {
 	ServletContext context;
 	
 	@Transactional
-	@RequestMapping("trang-chu")
-	public String home(ModelMap model,@ModelAttribute("idlsp") String idlsp) {
+	
+	// request trang-chu
+	
+	@RequestMapping("thuc-don")
+	public String thucdon(ModelMap model,@ModelAttribute("idlsp") String idlsp) {
 		Session session = factory.getCurrentSession();
 		String hql = "From loaisanpham";
 		Query query = session.createQuery(hql);
@@ -54,7 +58,20 @@ public class user_burger_controller {
 			model.addAttribute("idlsp", idlsp);
 		}
 		
-		return("user/home");
+		return("user/thuc-don");
+	}
+	
+	// request trang thuc-don
+	
+	@RequestMapping("trang-chu")
+	public String trangchu(Model model  ) {
+		return ("user/home");
+	}
+	
+	/// trang 404
+	@RequestMapping("404")
+	public String error404(){
+		return "user/404";
 	}
 
 }
