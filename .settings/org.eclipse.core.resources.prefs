@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
 encoding//WebContent/WEB-INF/views/user-layout.jsp=UTF-8
+encoding//src/api/admin/new_api.java=UTF-8
 encoding//src/burger/controller/user_burger_controller.java=UTF-8
 encoding//src/burger/service/upload.java=UTF-8
